@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_screen_padding"
+    android:background="@drawable/ic_app_bg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/download"
+        app:layout_constraintBottom_toTopOf="@+id/fLayout">
+
+
+    </ImageView>
+
+    <FrameLayout
+        android:id="@+id/fLayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/start_button_clicked_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_image">
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="START"
+            android:gravity="center"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="24sp">
+
+        </TextView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBMI"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/circular_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fLayout">
+
+        <TextView
+            android:id="@+id/tvBmi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="BMI"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/flBMI"
+        app:layout_constraintStart_toStartOf="@id/flBMI"
+        app:layout_constraintEnd_toEndOf="@id/flBMI"
+        android:gravity="center"
+        android:textColor="#ef233c"
+        android:textSize="24sp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
